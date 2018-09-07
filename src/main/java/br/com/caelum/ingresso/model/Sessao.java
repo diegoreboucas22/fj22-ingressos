@@ -60,5 +60,17 @@ public LocalTime getHorarioTermino() {
 	return this.horario.plusMinutes(filme.getDuracao().toMinutes());
 }
 
-//criar getters e setters
+
+	public void setFilme(Filme filme) {
+		this.filme = filme;
+	}
+
+
+	public LocalTime getHorarioTermino() {
+		
+		
+		return this.horario.plusMinutes(this.filme.getDuracao().toMinutes());
+	}
+	
+
 }
