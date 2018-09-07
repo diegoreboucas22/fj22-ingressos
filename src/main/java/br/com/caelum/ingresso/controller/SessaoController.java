@@ -63,7 +63,7 @@ public class SessaoController {
 			return form(form.getSalaId(),form);
 		}
 		
-		return modelAndView;
+		return new ModelAndView("redirect:/admin/sala"+ form.getSalaId()+ "/sessoes");
 				
 
 	}
