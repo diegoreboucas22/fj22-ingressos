@@ -51,9 +51,8 @@ public class Sala {
         return nome;
     }
 
-    public void setNome(String nome, BigDecimal preco) {
+    public void setNome(String nome) {
         this.nome = nome;
-        this.preco = preco;
     }
 
 

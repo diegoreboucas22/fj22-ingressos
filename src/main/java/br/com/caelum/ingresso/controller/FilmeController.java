@@ -12,7 +12,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.validation.Valid;
@@ -92,7 +91,7 @@ public class FilmeController {
 		Filme filme = filmeDao.findOne(id);
 		List<Sessao> sessoes = sessaoDao.buscaSessoesDoFilme(filme);
 
-		Optional<DetalhesDoFilme> detalhesdoFilme = client.request(filme);
+		Optional<DetalhesDoFilme> detalhesdoFilme = client.request(filme, DetalhesDoFilme.class);
 		
 		modelAndView.addObject("sessoes", sessoes);
 		modelAndView.addObject("detalhes", detalhesdoFilme.orElse(new DetalhesDoFilme()));
