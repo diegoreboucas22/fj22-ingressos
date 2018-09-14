@@ -1,5 +1,10 @@
 package br.com.caelum.ingresso.converter;
 
-public class YearMonthConverter {
+import java.time.YearMonth;
+
+import org.springframework.cglib.core.Converter;
+
+public class YearMonthConverter implements Converter<String,YearMonth> {
+	public YearMonth
 
 }
